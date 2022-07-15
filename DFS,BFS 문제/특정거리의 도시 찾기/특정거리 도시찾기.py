@@ -1,6 +1,4 @@
 from collections import deque
-from typing import Deque
-from collections import deque;
 
 N, M, K, X = map(int, input().split())
 graph = [[] for _ in range(N + 1)]
@@ -24,3 +22,8 @@ while q:
 for a, b in enumerate(distance):
   if b == K:
     print(a)
+
+
+# 알게된 점
+  # 1. graph의 인덱스를 도시 번호로 지정하기 위해 N + 1개의 원소를 graph에 만들었다.
+  # 2. 큐 자료구조로 거리를 구할 때 이전 도시까지의 거리 + 1 하면 된다. 학교에서 배운거다.
